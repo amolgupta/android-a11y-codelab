@@ -1,8 +1,8 @@
-package com.github.a11y_codelab
+package com.github.a11y_codelab.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.github.a11y_codelab.ui.main.MainFragment
+import com.github.a11y_codelab.R
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,10 +1,13 @@
-package com.github.a11y_codelab.ui.main
+package com.github.a11y_codelab.ui
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.NonNull
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -28,8 +31,14 @@ class PostsAdapter(private val posts: List<Post>) : ListAdapter<Post, PostsAdapt
     }
 
     class ViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
+        @SuppressLint("SetTextI18n")
         fun bind(item: Post) {
             view.findViewById<TextView>(R.id.user).text = item.username
+            view.findViewById<TextView>(R.id.content).text = item.content
+            item.image?.let {
+                view.findViewById<ImageView>(R.id.image)
+                    .setImageDrawable(ResourcesCompat.getDrawable(view.context.resources, it, null))
+            }
         }
     }
 }
