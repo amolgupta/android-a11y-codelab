@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.github.a11y_codelab.R
 import com.github.a11y_codelab.data.getPosts
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainFragment : Fragment() {
 
@@ -27,6 +28,12 @@ class MainFragment : Fragment() {
             layoutManager =
                 LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
             this.adapter = postsAdapter
+        }
+
+        view.findViewById<FloatingActionButton>(R.id.add_post).setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.container, NewPostFragment.newInstance())
+                .commitNow()
         }
     }
 
