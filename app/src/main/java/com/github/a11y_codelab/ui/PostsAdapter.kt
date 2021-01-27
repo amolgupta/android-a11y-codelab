@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.NonNull
@@ -37,13 +36,9 @@ class PostsAdapter(private val posts: List<Post>) : ListAdapter<Post, PostsAdapt
             view.findViewById<TextView>(R.id.user).text = item.username
             view.findViewById<TextView>(R.id.content).text = item.content
             item.image?.let {
-                view.findViewById<ImageView>(R.id.image).apply {
-                    setImageDrawable(ResourcesCompat.getDrawable(view.context.resources, it, null))
-                    contentDescription = item.contentDescription
-                }
+                view.findViewById<ImageView>(R.id.image)
+                    .setImageDrawable(ResourcesCompat.getDrawable(view.context.resources, it, null))
             }
-            view.findViewById<Button>(R.id.btn_comment).contentDescription = "Comment on post by ${item.username}"
-            view.findViewById<Button>(R.id.btn_like).contentDescription = "Like this post by ${item.username}"
         }
     }
 }

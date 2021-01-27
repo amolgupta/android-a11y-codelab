@@ -7,7 +7,4 @@
     <string name="post">Post</string>
     <string name="what_s_happening">What\'s happening?</string>
     <string name="new_post">New Post</string>
-    <string name="post_comment">Post Comment</string>
-    <string name="add_a_post">Add a post</string>
-    <string name="close_button">Close</string>
 </resources>
