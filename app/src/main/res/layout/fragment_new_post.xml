@@ -10,6 +10,7 @@
     >
 
     <Button
+        android:id="@+id/new_post_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/post"
@@ -25,7 +26,8 @@
         android:layout_height="wrap_content"
         android:hint="@string/what_s_happening"
         android:layout_margin="8dp"
-        android:minLines="4"
+        android:inputType="text"
+        app:maxLines="2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         />

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.github.a11y_codelab.R
@@ -33,6 +34,7 @@ class MainFragment : Fragment() {
 
         view.findViewById<ExtendedFloatingActionButton>(R.id.add_post).setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
+                .setCustomAnimations( R.anim.slide_up, 0, 0, R.anim.slide_down)
                 .replace(R.id.container, NewPostFragment.newInstance())
                 .commitNow()
         }

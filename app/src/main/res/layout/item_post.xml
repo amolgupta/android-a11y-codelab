@@ -18,25 +18,21 @@
 
         <Button
             android:id="@+id/btn_like"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/ButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:textSize="10sp"
+            android:layout_height="wrap_content"
             android:text="@string/like"
-            android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/image"
-
+            app:layout_constraintBottom_toBottomOf="parent"
             />
 
         <Button
             android:id="@+id/btn_comment"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/ButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:textSize="10sp"
+            android:layout_height="wrap_content"
             android:text="@string/comment"
-            android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@+id/btn_like"
             app:layout_constraintTop_toBottomOf="@id/image"
             />
@@ -66,7 +62,7 @@
             android:id="@+id/content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingVertical="8dp"
+            style="@style/ContentTextStyle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/user"
             tools:text="This is content"
@@ -76,7 +72,7 @@
             android:id="@+id/user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="8dp"
+            style="@style/UserNameTextStyle"
             app:layout_constraintStart_toEndOf="@+id/user_image"
             app:layout_constraintTop_toTopOf="@id/user_image"
             app:layout_constraintBottom_toBottomOf="@id/user_image"
