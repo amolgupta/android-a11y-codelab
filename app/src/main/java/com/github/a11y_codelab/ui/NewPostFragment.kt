@@ -29,6 +29,7 @@ class NewPostFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<Toolbar>(R.id.toolbar).apply {
             setNavigationIcon(R.drawable.ic_baseline_close_24)
+            setNavigationContentDescription(R.string.close_button)
         }
 
         editText.setOnEditorActionListener { v, actionId, event ->

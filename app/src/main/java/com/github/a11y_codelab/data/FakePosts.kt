@@ -5,6 +5,13 @@ import com.github.a11y_codelab.model.Post
 
 fun getPosts(): List<Post>  = listOf(
     Post(
+        id = "345",
+        username = "Channa",
+        content = "I am flying back to Sri Lanka after a long time.",
+        image = R.drawable.sl,
+        contentDescription = "A Map of Sri Lanka"
+    ),
+    Post(
         id = "123",
         username = "Haroldo",
         content = "Can't wait for summers, and invite the team for a barbecue",
@@ -15,13 +22,6 @@ fun getPosts(): List<Post>  = listOf(
         id = "91011",
         username = "Morten",
         content = "Let's run an experiment to remove this feature"
-    ),
-    Post(
-        id = "345",
-        username = "Channa",
-        content = "I am flying back to Sri Lanka after a long time.",
-        image = R.drawable.sl,
-        contentDescription = "A Map of Sri Lanka"
     ),
     Post(
         id = "678",

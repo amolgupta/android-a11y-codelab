@@ -17,20 +17,21 @@
 
     <style name="ButtonStyle" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="ContentTextStyle" parent="Widget.MaterialComponents.TextView">
         <item name="textAllCaps">false</item>
         <item name="android:textColor">@color/textGrey</item>
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
 
     <style name="UserNameTextStyle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:paddingVertical">12dp</item>
         <item name="android:layout_marginHorizontal">4dp</item>
         <item name="textAllCaps">false</item>
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/black</item>
     </style>
 </resources>
