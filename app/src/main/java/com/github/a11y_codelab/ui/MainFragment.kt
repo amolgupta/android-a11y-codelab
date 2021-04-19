@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -36,8 +37,14 @@ class MainFragment : Fragment() {
             requireActivity().supportFragmentManager.beginTransaction()
                 .setCustomAnimations( R.anim.slide_up, 0, 0, R.anim.slide_down)
                 .replace(R.id.container, NewPostFragment.newInstance())
-                .commitNow()
+                .addToBackStack("Home")
+                .commit()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        requireView().findViewById<TextView>(R.id.subtitle)!!.text = "Showing 4 posts"
     }
 
     companion object {

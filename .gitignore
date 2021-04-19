@@ -3,12 +3,8 @@
 /local.properties
 /.idea/caches
 /.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-/.idea/compiler.xml
-/.idea/misc.xml
+/.idea/*.xml
+.idea/inspectionProfiles/
 .DS_Store
 /build
 /captures

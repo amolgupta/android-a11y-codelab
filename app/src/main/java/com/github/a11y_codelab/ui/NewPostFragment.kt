@@ -30,7 +30,7 @@ class NewPostFragment : Fragment() {
         view.findViewById<Toolbar>(R.id.toolbar).apply {
             setNavigationIcon(R.drawable.ic_baseline_close_24)
         }
-
+        button.setOnClickListener { requireActivity().onBackPressed() }
         editText.setOnEditorActionListener { v, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_NEXT) {
                 button.requestFocus()
